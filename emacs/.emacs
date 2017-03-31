@@ -6,6 +6,10 @@
  '(ansi-color-names-vector
    ["#212526" "#ff4b4b" "#b4fa70" "#fce94f" "#729fcf" "#e090d7" "#8cc4ff" "#eeeeec"])
  '(custom-enabled-themes (quote (tsdh-dark)))
+ '(custom-safe-themes
+   (quote
+    ("a1289424bbc0e9f9877aa2c9a03c7dfd2835ea51d8781a0bf9e2415101f70a7e" "08b8807d23c290c840bbb14614a83878529359eaba1805618b3be7d61b0b0a32" default)))
+ '(fci-rule-color "#3E4451")
  '(jde-jdk-registry (quote (("1.8.0_66" . "/usr/lib/jvm/jdk1.8.0_66"))))
  '(jdee-server-dir "~/.emacs.d/elpa/jdee-20161130.1311/jdee-server/target/")
  '(menu-bar-mode nil)
@@ -18,6 +22,10 @@
  ;; If there is more than one, they won't work right.
  )
 (set-face-attribute 'default nil :height 120)
+
+;; Themes:
+(add-to-list 'custom-theme-load-path "~/.emacs.d/custom_themes/atom-one-dark-theme/")
+(load-theme 'atom-one-dark t)
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
